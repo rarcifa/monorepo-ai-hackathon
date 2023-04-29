@@ -1,0 +1,19 @@
+@import 'src/variables.module.scss';
+
+.navbar {
+  display: flex;
+  align-items: center;
+  color: $color-dark;
+  padding: $size-xxl;
+  margin-right: auto;
+  margin-left: auto;
+  
+  .logo {
+    font-size: $size-lg;
+    font-weight: bolder;
+
+    @include sm {
+      width:  $size-md;
+    }
+  }
+}

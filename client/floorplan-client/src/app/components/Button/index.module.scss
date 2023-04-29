@@ -1,0 +1,17 @@
+@import 'src/variables.module.scss';
+
+.button {
+  padding: $size-xxs $size-md;
+  border: 0.1em solid $color-dark;
+  color: $color-dark;
+  border-radius: $size-lg;
+  font-size: $size-md;
+  margin-right: $size-xs;
+  letter-spacing: .05rem;
+}
+
+.active {
+  background: linear-gradient(90deg, #36D29F 0%, #009FE3 97.64%);
+  border: 0.1em solid transparent;
+  color: white;
+}
