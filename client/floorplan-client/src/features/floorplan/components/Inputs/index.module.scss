@@ -1,0 +1,31 @@
+@import 'src/variables.module.scss';
+
+.inputsContainer {
+  padding-top: $size-xl;
+  padding-bottom: $size-xl;
+  margin: auto;
+  text-align: right;
+  .inputRow {
+    margin-top: $size-xs;
+    margin-bottom: $size-xs;
+
+    .inputTitle {
+      padding: $size-xxs $size-md;
+      color: $color-dark;
+      border-radius: $size-lg;
+      font-size: $size-md;
+      margin-right: $size-xs;
+      letter-spacing: .05rem;
+    }
+
+    .input {
+      width: $size-xl;
+    }
+
+    .divider {
+      margin-left: $size-xxxs;
+      margin-right: $size-xxs;
+      text-align: center;
+    }
+  }
+}

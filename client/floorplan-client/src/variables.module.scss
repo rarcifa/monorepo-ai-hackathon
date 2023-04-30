@@ -1,0 +1,65 @@
+$screen-sm-max: 29.9375em; /* 479px */
+$screen-md-max: 47.9375em; /* 767px */
+$screen-lg-max: 61.9375em; /* 992px */
+$screen-xl-max: 85.25em; /* 1364px */ 
+
+// Small devices
+@mixin sm {
+  @media (max-width: #{$screen-sm-max}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (max-width: #{$screen-md-max}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (max-width: #{$screen-lg-max}) {
+    @content;
+  }
+}
+
+// extra Large devices
+@mixin xl {
+  @media (max-width: #{$screen-xl-max}) {
+    @content;
+  }
+}
+
+// font-size, padding, and margin
+$size-xxxs: 0.375em; /* 6px */
+$size-xxs: 0.5em; /* 8px */
+$size-xs: 0.75em; /* 12px */
+$size-sm: 0.875em; /* 15px */
+$size-md: 1.125em; /* 18px */
+$size-lg: 1.25em; /* 20px */
+$size-xl: 1.563em; /* 25px */
+$size-xxl: 2em; /* 32px */
+$size-xxxl: 2.5em; /* 40px */
+
+//title
+$title-line-height: 5em; /* 80px */
+
+// font weight
+$font-weight-light: 300;
+$font-weight-normal: 400; 
+$font-weight-medium: 500;
+$font-weight-bold: 600;
+$font-weight-bolder: 800;
+
+// colors
+$color-white: #ffffff;
+$color-dark: #222;
+$color-grey: #B7BDC8;
+$color-primary-green: #1CF1D8;
+$color-primary-blue: #009FE3;
+
+// miscellaneous
+$w-100: 100%;
+$h-100: 100%;
+$border-radius-rounded: 562.5em;

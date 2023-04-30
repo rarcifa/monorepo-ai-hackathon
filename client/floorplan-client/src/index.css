@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'Gotham';
+  src: url('app/assets/fonts/Gotham-Book.otf') format('woff2'), url('app/assets/fonts/Gotham-Medium.otf') format('woff2'), url('app/assets/fonts/Gotham-Bold.otf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  font-family: Poppins, -apple-system, '.SFNSText-Regular', 'San Francisco', BlinkMacSystemFont,
+    '.PingFang-SC-Regular', 'Microsoft YaHei', 'Segoe UI', 'Helvetica Neue', Helvetica, Arial,
+    sans-serif;
+    background-color: #ffffff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}

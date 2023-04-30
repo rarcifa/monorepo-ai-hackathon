@@ -1,0 +1,15 @@
+@import 'src/variables.module.scss';
+
+.outputContainer {
+  margin-right: 100px;
+
+  .output {
+    border: 1px solid;
+    border-radius: $size-xl;
+    text-align: left;
+    padding-top: $size-xl;
+    padding-bottom: $size-xl;
+    height: 150px;
+    margin-bottom: $size-xl;
+  }
+}

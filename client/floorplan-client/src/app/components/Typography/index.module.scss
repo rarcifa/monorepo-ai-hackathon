@@ -1,0 +1,10 @@
+@import 'src/variables.module.scss';
+
+.typography {
+  font-size:$size-md;
+  color: $color-dark;
+}
+
+.centerAlign {
+  text-align: center;
+}
