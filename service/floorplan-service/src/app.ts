@@ -1,12 +1,16 @@
 import * as routes from '@routes/index';
 import * as bodyParser from 'body-parser';
 import express from 'express';
+import cors from 'cors';
 
 import { logger } from '@helpers/logger';
 
 const app = express();
 app.use(bodyParser.json({ limit: '10mb' }));
 app.use(bodyParser.urlencoded({ extended: false }));
+
+// Add the cors middleware
+app.use(cors());
 
 /* routing setup */
 routes.register(app);
