@@ -36,6 +36,6 @@ export const PORT: string = process.env.PORT;
 export const OPENAI_API_KEY: string = process.env.OPENAI_API_KEY;
 
 // router
-export const supplyStatsRouter: Router = express.Router();
+export const floorplanRouter: Router = express.Router();
 export const healthRouter: Router = express.Router();
 export const logRouter: Router = express.Router();

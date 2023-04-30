@@ -3,13 +3,13 @@ import { validator } from '@src/handlers/floorplan/validator';
 
 import { verifyErrors } from '@lib/middlewares/validation.middleware';
 
-import { supplyStatsRouter } from '@config/constants';
+import { floorplanRouter } from '@config/constants';
 
-supplyStatsRouter.post(
+floorplanRouter.post(
   '/generate',
   validator.generateFloorplan,
   verifyErrors,
   controller.generateFloorplan
 );
 
-export default supplyStatsRouter;
+export default floorplanRouter;
