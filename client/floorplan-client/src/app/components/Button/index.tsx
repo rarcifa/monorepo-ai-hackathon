@@ -6,11 +6,15 @@ const cx = classnames.bind(styles);
 interface Props {
   children: string;
   active?: boolean;
+  onClick: () => void;
 }
 
-export function Button({ children, active }: Props) {
+export function Button({ children, active, onClick }: Props) {
   return (
-    <span className={cx(styles.button, { [styles.active]: active })}>
+    <span
+      onClick={() => onClick()}
+      className={cx(styles.button, { [styles.active]: active })}
+    >
       {children}
     </span>
   );

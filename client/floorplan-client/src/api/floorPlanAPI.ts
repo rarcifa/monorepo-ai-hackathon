@@ -1,39 +1,45 @@
 import axios, { AxiosInstance, AxiosResponse } from 'axios';
-import {
-  SERVICE_API_BASE_URL,
-  SERVICE_API_KEY,
-  logger,
-} from 'config/constants';
+import { SERVICE_API_BASE_URL, logger } from 'config/constants';
 import { IResult } from 'features/types/floorplan';
 
 export const serviceInstance: AxiosInstance = axios.create({
-  baseURL: `${SERVICE_API_BASE_URL}/api/v1/floorplan-service`,
-  headers: {
-    'X-API-KEY': SERVICE_API_KEY,
-  },
+  baseURL: `http://localhost:3040/api/v1/floorplan-service`,
 });
 
 /**
  * @summary  returns results from floorplan api
- * @param  {number} page - page param
+ * @param  {number} total_area_input_one - numeric param
+ * @param  {number} total_area_input_two - numeric param
+ * @param  {number} room_one_input_one - numeric param
+ * @param  {number} room_one_input_two - numeric param
+ * @param  {number} room_two_input_one - numeric param
+ * @param  {number} room_two_input_two - numeric param
+ * @param  {number} room_three_input_one - numeric param
+ * @param  {number} room_three_input_two - numeric param
  * @returns  {Promise<IResult>} - returned value
  */
 export const generateFloorPlan = async (
-  total_size: number[],
-  room_1_size: number[],
-  room_2_size: number[],
-  room_3_size: number[]
+  total_area_input_one: number,
+  total_area_input_two: number,
+  room_one_input_one: number,
+  room_one_input_two: number,
+  room_two_input_one: number,
+  room_two_input_two: number,
+  room_three_input_one: number,
+  room_three_input_two: number
 ): Promise<IResult> => {
   const url = '/generate';
   try {
     const dapp: AxiosResponse<IResult, string> =
-      await serviceInstance.get<IResult>(url, {
-        params: {
-          total_size,
-          room_1_size,
-          room_2_size,
-          room_3_size,
-        },
+      await serviceInstance.post<IResult>(url, {
+        total_area_input_one,
+        total_area_input_two,
+        room_one_input_one,
+        room_one_input_two,
+        room_two_input_one,
+        room_two_input_two,
+        room_three_input_one,
+        room_three_input_two,
       });
     return dapp.data;
   } catch (e) {

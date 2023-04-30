@@ -5,24 +5,41 @@ import { IResult, TAsyncThunkConfig } from 'features/types/floorplan';
 export const generateFloorPlansAction: AsyncThunk<
   IResult,
   {
-    totalFloor: number[];
-    roomOneFloor: number[];
-    roomTwoFloor: number[];
-    roomThreeFloor: number[];
+    total_area_input_one: number;
+    total_area_input_two: number;
+    room_one_input_one: number;
+    room_one_input_two: number;
+    room_two_input_one: number;
+    room_two_input_two: number;
+    room_three_input_one: number;
+    room_three_input_two: number;
   },
   TAsyncThunkConfig
 > = createAsyncThunk(
   'floorplan/generateFloorPlansAction',
   async (
-    { totalFloor, roomOneFloor, roomTwoFloor, roomThreeFloor },
+    {
+      total_area_input_one,
+      total_area_input_two,
+      room_one_input_one,
+      room_one_input_two,
+      room_two_input_one,
+      room_two_input_two,
+      room_three_input_one,
+      room_three_input_two,
+    },
     { rejectWithValue }
   ) => {
     try {
       const data: IResult = await generateFloorPlan(
-        totalFloor,
-        roomOneFloor,
-        roomTwoFloor,
-        roomThreeFloor
+        total_area_input_one,
+        total_area_input_two,
+        room_one_input_one,
+        room_one_input_two,
+        room_two_input_one,
+        room_two_input_two,
+        room_three_input_one,
+        room_three_input_two
       );
       return data;
     } catch (e) {
